@@ -10,6 +10,10 @@ A circular progress view for iOS implemented in Swift.
 * Change track color, and progress color
 * Adjustable track width
 
+## Installation
+
+Simply add CircularProgressView.swift in your project. Then either create an instance of CircularProgressView using code or Interface Builder.
+
 ## Usage
 
 ### Programmatically
