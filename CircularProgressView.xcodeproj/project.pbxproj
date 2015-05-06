@@ -31,6 +31,7 @@
 /* Begin PBXFileReference section */
 		DF3E10B61AFA979200AFBD70 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 		DF3E10B81AFAC63D00AFBD70 /* LICENSE.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = LICENSE.md; sourceTree = "<group>"; };
+		DF3E10BE1AFACB6B00AFBD70 /* CircularProgressView.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CircularProgressView.png; sourceTree = "<group>"; };
 		DF4F19F51AF57C980079AF39 /* CircularProgressView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CircularProgressView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF4F19F91AF57C980079AF39 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DF4F19FA1AF57C980079AF39 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -62,11 +63,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DF3E10BD1AFACB6B00AFBD70 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				DF3E10BE1AFACB6B00AFBD70 /* CircularProgressView.png */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
 		DF4F19EC1AF57C980079AF39 = {
 			isa = PBXGroup;
 			children = (
 				DF3E10B81AFAC63D00AFBD70 /* LICENSE.md */,
 				DF3E10B61AFA979200AFBD70 /* README.md */,
+				DF3E10BD1AFACB6B00AFBD70 /* Images */,
 				DF4F19F71AF57C980079AF39 /* CircularProgressView */,
 				DF4F1A0D1AF57C990079AF39 /* CircularProgressViewTests */,
 				DF4F19F61AF57C980079AF39 /* Products */,
