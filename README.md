@@ -2,6 +2,8 @@
 
 A circular progress view for iOS implemented in Swift.
 
+![alt tag](https://christopheramanse.files.wordpress.com/2015/05/circularprogressview.png)
+
 ## Features
 
 * Autoresizes proportionally and centers to fit view
