@@ -13,6 +13,7 @@
 		DF4F1A021AF57C980079AF39 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DF4F1A011AF57C980079AF39 /* Images.xcassets */; };
 		DF4F1A051AF57C980079AF39 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF4F1A031AF57C980079AF39 /* LaunchScreen.xib */; };
 		DF4F1A111AF57C990079AF39 /* CircularProgressViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF4F1A101AF57C990079AF39 /* CircularProgressViewTests.swift */; };
+		DFC2EE3E1AF8A4D90020A9A5 /* CircularProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC2EE3D1AF8A4D90020A9A5 /* CircularProgressView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		DF4F1A0A1AF57C990079AF39 /* CircularProgressViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CircularProgressViewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF4F1A0F1AF57C990079AF39 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DF4F1A101AF57C990079AF39 /* CircularProgressViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularProgressViewTests.swift; sourceTree = "<group>"; };
+		DFC2EE3D1AF8A4D90020A9A5 /* CircularProgressView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircularProgressView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 			children = (
 				DF4F19FA1AF57C980079AF39 /* AppDelegate.swift */,
 				DF4F19FC1AF57C980079AF39 /* ViewController.swift */,
+				DFC2EE3D1AF8A4D90020A9A5 /* CircularProgressView.swift */,
 				DF4F19FE1AF57C980079AF39 /* Main.storyboard */,
 				DF4F1A011AF57C980079AF39 /* Images.xcassets */,
 				DF4F1A031AF57C980079AF39 /* LaunchScreen.xib */,
@@ -213,6 +216,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DF4F19FD1AF57C980079AF39 /* ViewController.swift in Sources */,
+				DFC2EE3E1AF8A4D90020A9A5 /* CircularProgressView.swift in Sources */,
 				DF4F19FB1AF57C980079AF39 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -411,6 +415,7 @@
 				DF4F1A161AF57C990079AF39 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DF4F1A171AF57C990079AF39 /* Build configuration list for PBXNativeTarget "CircularProgressViewTests" */ = {
 			isa = XCConfigurationList;
@@ -419,6 +424,7 @@
 				DF4F1A191AF57C990079AF39 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
