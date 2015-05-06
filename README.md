@@ -2,7 +2,7 @@
 
 A circular progress view for iOS implemented in Swift.
 
-![](./circularprogressview.png)
+![](./Images/circularprogressview.png)
 
 ## Features
 
