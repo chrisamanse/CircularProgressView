@@ -128,5 +128,3 @@ class CircularProgressView: UIView {
         self.progress = progress
     }
 }
-
-}
