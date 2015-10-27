@@ -5,6 +5,10 @@
 //  Created by Chris Amanse on 5/2/15.
 //  Copyright (c) 2015 Joe Christopher Paul Amanse. All rights reserved.
 //
+//  Version 1.0.0
+//  MIT license
+//  https://github.com/chrisamanse/ios-circularprogressview
+//
 
 import UIKit
 
@@ -114,7 +118,7 @@ class CircularProgressView: UIView {
         commonInitialization()
     }
 
-    required init(coder aDecoder: NSCoder) {
+    required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
     
