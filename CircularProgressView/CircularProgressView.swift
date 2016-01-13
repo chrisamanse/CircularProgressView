@@ -2,129 +2,186 @@
 //  CircularProgressView.swift
 //  CircularProgressView
 //
-//  Created by Chris Amanse on 5/2/15.
-//  Copyright (c) 2015 Joe Christopher Paul Amanse. All rights reserved.
-//
-//  Version 1.0.0
-//  MIT license
-//  https://github.com/chrisamanse/ios-circularprogressview
+//  Created by Chris Amanse on 1/13/16.
+//  Copyright © 2016 Joe Christopher Paul Amanse. All rights reserved.
 //
 
 import UIKit
 
 @IBDesignable
-class CircularProgressView: UIView {
-    // MARK: - Layers
+public class CircularProgressView: UIView {
+    internal let trackLayer = CAShapeLayer()
+    internal let progressLayer = CAShapeLayer()
     
-    let trackLayer: CAShapeLayer = CAShapeLayer()
-    let progressLayer: CAShapeLayer = CAShapeLayer()
+    // MARK: Inspectable
     
-    // MARK: - Properties
-    
-    @IBInspectable var trackWidth: CGFloat = 5.0 {
+    @IBInspectable public var trackWidth: CGFloat = 2 {
         didSet {
-            redrawTrackSublayer()
-            redrawProgressSublayer()
+            layoutTrackLayer()
+        }
+    }
+    @IBInspectable public var progressWidth: CGFloat = 2 {
+        didSet {
+            layoutProgressLayer()
         }
     }
     
-    @IBInspectable var trackColor: UIColor = UIColor.darkGrayColor() {
+    @IBInspectable public var trackTintColor: UIColor? = UIColor.lightGrayColor() {
         didSet {
-            trackLayer.strokeColor = trackColor.CGColor
+            colorTrackLayer()
         }
     }
-    @IBInspectable var progressColor: UIColor = UIColor.lightGrayColor() {
+    @IBInspectable public var progressTintColor: UIColor? = UIColor.darkGrayColor()
+    
+    @IBInspectable public var progress: Float = 0 {
         didSet {
-            progressLayer.strokeColor = progressColor.CGColor
-        }
-    }
-    @IBInspectable var progress: Double = 0 {
-        didSet {
-            redrawProgressSublayer()
+            // Pin values between [0,1]
+            if progress < 0 {
+                progress = 0
+            } else if progress > 1 {
+                progress = 1
+            } else {
+                // Valid value, update stroke
+                updateProgressStroke()
+            }
         }
     }
     
-    // MARK: - Drawing
+    // MARK: Drawing properties
     
-    override func layoutSubviews() {
-        super.layoutSubviews()
+    private func circleRadiusWithStrokeWidth(strokeWidth: CGFloat, withinSize size: CGSize) -> CGFloat {
+        let width = size.width
+        let height = size.height
         
-        // Redraw layers to keep center and proportional
-        redrawTrackSublayer()
-        redrawProgressSublayer()
+        let length = width > height ? height : width
+        return (length - strokeWidth) / 2
     }
-    
-    func redrawTrackSublayer() {
-        let frameWidth = frame.width
-        let frameHeight = frame.height
-        let side: CGFloat = (frameWidth < frameHeight) ? frameWidth : frameHeight
-        let trackCenter = CGPoint(x: frameWidth / 2, y: frameHeight / 2)
+    private func circleFrameWithStrokeWidth(strokeWidth: CGFloat, withRadius radius: CGFloat, withinSize size: CGSize) -> CGRect {
+        let width = size.width
+        let height = size.height
         
-        let radius = (side - trackWidth) / 2
-        let trackPath = UIBezierPath()
-        trackPath.moveToPoint(CGPoint(x: trackCenter.x + radius, y: trackCenter.y))
-        trackPath.addArcWithCenter(trackCenter, radius: radius, startAngle: 0, endAngle: CGFloat(2 * M_PI), clockwise: true)
-
-        trackLayer.path = trackPath.CGPath
-        trackLayer.lineWidth = trackWidth
+        let x: CGFloat
+        let y: CGFloat
+        
+        if width > height {
+            y = strokeWidth / 2
+            x = (width / 2) - radius
+        } else {
+            x = strokeWidth / 2
+            y = (height / 2) - radius
+        }
+        
+        let diameter = 2 * radius
+        return CGRect(x: x, y: y, width: diameter, height: diameter)
     }
-    
-    func redrawProgressSublayer() {
-        let frameWidth = frame.width
-        let frameHeight = frame.height
-        let side: CGFloat = (frameWidth < frameHeight) ? frameWidth : frameHeight
-        let trackCenter = CGPoint(x: frameWidth / 2, y: frameHeight / 2)
+    internal var trackPath: UIBezierPath {
+        let size = bounds.size
+        let radius = circleRadiusWithStrokeWidth(trackWidth, withinSize: size)
         
-        let radius = (side - trackWidth) / 2
+        return UIBezierPath(ovalInRect: circleFrameWithStrokeWidth(trackWidth, withRadius: radius, withinSize: size))
+    }
+    internal var progressPath: UIBezierPath {
         let progressPath = UIBezierPath()
-        progressPath.moveToPoint(CGPoint(x: trackCenter.x, y: trackCenter.y - radius))
-        progressPath.addArcWithCenter(trackCenter, radius: radius, startAngle: CGFloat(-M_PI_2), endAngle: CGFloat(progress*2*M_PI - M_PI_2), clockwise: true)
         
-        progressLayer.path = progressPath.CGPath
-        progressLayer.lineWidth = trackWidth
-    }
-    
-    // MARK: - Initialization
-    
-    func commonInitialization() {
-        // Add track layer
-        trackLayer.opacity = 1
-        trackLayer.strokeColor = trackColor.CGColor
-        trackLayer.fillColor = nil
-        layer.addSublayer(trackLayer)
+        let radius = circleRadiusWithStrokeWidth(progressWidth, withinSize: bounds.size)
+        let frame = circleFrameWithStrokeWidth(progressWidth, withRadius: radius, withinSize: bounds.size)
+        let frameCenter = CGPoint(x: (frame.width / 2) + frame.origin.x, y: (frame.height / 2) + frame.origin.y)
         
-        // Add progress layer
-        progressLayer.opacity = 1
-        progressLayer.strokeColor = progressColor.CGColor
-        progressLayer.fillColor = nil
-        layer.addSublayer(progressLayer)
-    }
-    
-    // MARK: Live Render IB
-    override func prepareForInterfaceBuilder() {
-        commonInitialization()
-    }
-    
-    // MARK: IB load
-    override func awakeFromNib() {
-        commonInitialization()
-    }
-    
-    // MARK: Programmatic
-    override init(frame: CGRect) {
-        super.init(frame: frame)
+        progressPath.moveToPoint(CGPoint(x: frameCenter.x, y: frameCenter.y - radius))
+        progressPath.addArcWithCenter(frameCenter,
+            radius: radius,
+            startAngle: CGFloat(-M_PI_2),
+            endAngle: CGFloat((2 * M_PI) - M_PI_2),
+            clockwise: true)
         
-        // Initialize sublayers
-        commonInitialization()
+        return progressPath
     }
-
-    required init?(coder aDecoder: NSCoder) {
+    
+    // MARK: Initialization
+    
+    required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
     
-    convenience init(frame: CGRect, trackWidth: CGFloat, progress: Double) {
-        self.init(frame: frame)
-        self.trackWidth = trackWidth
-        self.progress = progress
+    public override func awakeFromNib() {
+        super.awakeFromNib()
+        
+        customInitialization()
+    }
+    
+    override public init(frame: CGRect) {
+        super.init(frame: frame)
+        customInitialization()
+    }
+    
+    public init(frame: CGRect, progress: Float = 0, trackWidth: CGFloat = 2, progressWidth: CGFloat = 2,
+        trackTintColor: UIColor, progressTintColor: UIColor) {
+            super.init(frame: frame)
+            
+            self.trackWidth = trackWidth
+            self.progressWidth = progressWidth
+            self.trackTintColor = trackTintColor
+            self.progressTintColor = progressTintColor
+            self.progress = progress
+            
+            customInitialization()
+    }
+    convenience public init(frame: CGRect, progress: Float = 0, trackWidth: CGFloat, progressWidth: CGFloat) {
+        self.init(frame: frame, progress: progress, trackWidth: trackWidth, progressWidth: progressWidth,
+            trackTintColor: UIColor.lightGrayColor(), progressTintColor: UIColor.darkGrayColor())
+    }
+    
+    convenience public init(frame: CGRect, progress: Float = 0, circleWidth: CGFloat) {
+        self.init(frame: frame, progress: progress, trackWidth: circleWidth, progressWidth: circleWidth)
+    }
+    
+    private func customInitialization() {
+        let clearCGColor = UIColor.clearColor().CGColor
+        
+        trackLayer.fillColor = clearCGColor
+        colorTrackLayer()
+        layoutTrackLayer()
+        
+        progressLayer.fillColor = clearCGColor
+        
+        colorProgressLayer()
+        layoutProgressLayer()
+        updateProgressStroke()
+        
+        layer.addSublayer(trackLayer)
+        layer.addSublayer(progressLayer)
+    }
+    
+    // MARK: Layout and color
+    
+    public override func layoutSubviews() {
+        layoutTrackLayer()
+        layoutProgressLayer()
+    }
+    
+    private func layoutTrackLayer() {
+        trackLayer.frame = bounds
+        trackLayer.lineWidth = trackWidth
+        trackLayer.path = trackPath.CGPath
+    }
+    private func colorTrackLayer() {
+        trackLayer.strokeColor = trackTintColor?.CGColor
+    }
+    
+    private func layoutProgressLayer() {
+        progressLayer.frame = bounds
+        progressLayer.lineWidth = progressWidth
+        progressLayer.path = progressPath.CGPath
+    }
+    private func colorProgressLayer() {
+        progressLayer.strokeColor = progressTintColor?.CGColor
+    }
+    private func updateProgressStroke() {
+        progressLayer.strokeEnd = CGFloat(progress)
+    }
+    
+    // MARK: Interface builder
+    public override func prepareForInterfaceBuilder() {
+        customInitialization()
     }
 }
