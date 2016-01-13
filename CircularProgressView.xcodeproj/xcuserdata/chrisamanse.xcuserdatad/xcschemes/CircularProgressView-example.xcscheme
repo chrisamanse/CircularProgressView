@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "DF65CD521C45FF8500934C8D"
-               BuildableName = "CircularProgressView.framework"
-               BlueprintName = "CircularProgressView"
+               BlueprintIdentifier = "DF65CD721C460EF600934C8D"
+               BuildableName = "CircularProgressView-example.app"
+               BlueprintName = "CircularProgressView-example"
                ReferencedContainer = "container:CircularProgressView.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -32,9 +32,9 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "DF65CD5C1C45FF8500934C8D"
-               BuildableName = "CircularProgressViewTests.xctest"
-               BlueprintName = "CircularProgressViewTests"
+               BlueprintIdentifier = "DF65CD851C460EF600934C8D"
+               BuildableName = "CircularProgressView-exampleUITests.xctest"
+               BlueprintName = "CircularProgressView-exampleUITests"
                ReferencedContainer = "container:CircularProgressView.xcodeproj">
             </BuildableReference>
          </TestableReference>
@@ -42,9 +42,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "DF65CD521C45FF8500934C8D"
-            BuildableName = "CircularProgressView.framework"
-            BlueprintName = "CircularProgressView"
+            BlueprintIdentifier = "DF65CD721C460EF600934C8D"
+            BuildableName = "CircularProgressView-example.app"
+            BlueprintName = "CircularProgressView-example"
             ReferencedContainer = "container:CircularProgressView.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -61,15 +61,16 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
-      <MacroExpansion>
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "DF65CD521C45FF8500934C8D"
-            BuildableName = "CircularProgressView.framework"
-            BlueprintName = "CircularProgressView"
+            BlueprintIdentifier = "DF65CD721C460EF600934C8D"
+            BuildableName = "CircularProgressView-example.app"
+            BlueprintName = "CircularProgressView-example"
             ReferencedContainer = "container:CircularProgressView.xcodeproj">
          </BuildableReference>
-      </MacroExpansion>
+      </BuildableProductRunnable>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -79,15 +80,16 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <MacroExpansion>
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "DF65CD521C45FF8500934C8D"
-            BuildableName = "CircularProgressView.framework"
-            BlueprintName = "CircularProgressView"
+            BlueprintIdentifier = "DF65CD721C460EF600934C8D"
+            BuildableName = "CircularProgressView-example.app"
+            BlueprintName = "CircularProgressView-example"
             ReferencedContainer = "container:CircularProgressView.xcodeproj">
          </BuildableReference>
-      </MacroExpansion>
+      </BuildableProductRunnable>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

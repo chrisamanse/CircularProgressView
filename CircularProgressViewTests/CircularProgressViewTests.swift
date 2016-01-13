@@ -2,12 +2,12 @@
 //  CircularProgressViewTests.swift
 //  CircularProgressViewTests
 //
-//  Created by Chris Amanse on 5/2/15.
-//  Copyright (c) 2015 Joe Christopher Paul Amanse. All rights reserved.
+//  Created by Chris Amanse on 1/13/16.
+//  Copyright © 2016 Joe Christopher Paul Amanse. All rights reserved.
 //
 
-import UIKit
 import XCTest
+@testable import CircularProgressView
 
 class CircularProgressViewTests: XCTestCase {
     
@@ -23,12 +23,12 @@ class CircularProgressViewTests: XCTestCase {
     
     func testExample() {
         // This is an example of a functional test case.
-        XCTAssert(true, "Pass")
+        // Use XCTAssert and related functions to verify your tests produce the correct results.
     }
     
     func testPerformanceExample() {
         // This is an example of a performance test case.
-        self.measureBlock() {
+        self.measureBlock {
             // Put the code you want to measure the time of here.
         }
     }

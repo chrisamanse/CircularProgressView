@@ -1,9 +1,9 @@
 //
 //  AppDelegate.swift
-//  CircularProgressView
+//  CircularProgressView-example
 //
-//  Created by Chris Amanse on 5/2/15.
-//  Copyright (c) 2015 Joe Christopher Paul Amanse. All rights reserved.
+//  Created by Chris Amanse on 1/13/16.
+//  Copyright © 2016 Joe Christopher Paul Amanse. All rights reserved.
 //
 
 import UIKit

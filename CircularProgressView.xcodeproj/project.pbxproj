@@ -7,53 +7,103 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		DF3E10B71AFA979200AFBD70 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = DF3E10B61AFA979200AFBD70 /* README.md */; };
-		DF3E10B91AFAC63D00AFBD70 /* LICENSE.md in Sources */ = {isa = PBXBuildFile; fileRef = DF3E10B81AFAC63D00AFBD70 /* LICENSE.md */; };
-		DF4F19FB1AF57C980079AF39 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF4F19FA1AF57C980079AF39 /* AppDelegate.swift */; };
-		DF4F19FD1AF57C980079AF39 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF4F19FC1AF57C980079AF39 /* ViewController.swift */; };
-		DF4F1A001AF57C980079AF39 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF4F19FE1AF57C980079AF39 /* Main.storyboard */; };
-		DF4F1A021AF57C980079AF39 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DF4F1A011AF57C980079AF39 /* Images.xcassets */; };
-		DF4F1A051AF57C980079AF39 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF4F1A031AF57C980079AF39 /* LaunchScreen.xib */; };
-		DF4F1A111AF57C990079AF39 /* CircularProgressViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF4F1A101AF57C990079AF39 /* CircularProgressViewTests.swift */; };
-		DFC2EE3E1AF8A4D90020A9A5 /* CircularProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC2EE3D1AF8A4D90020A9A5 /* CircularProgressView.swift */; };
+		DF65CD571C45FF8500934C8D /* CircularProgressView.h in Headers */ = {isa = PBXBuildFile; fileRef = DF65CD561C45FF8500934C8D /* CircularProgressView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DF65CD5E1C45FF8500934C8D /* CircularProgressView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF65CD531C45FF8500934C8D /* CircularProgressView.framework */; };
+		DF65CD631C45FF8500934C8D /* CircularProgressViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF65CD621C45FF8500934C8D /* CircularProgressViewTests.swift */; };
+		DF65CD6E1C45FFA300934C8D /* CircularProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF65CD6D1C45FFA300934C8D /* CircularProgressView.swift */; };
+		DF65CD761C460EF600934C8D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF65CD751C460EF600934C8D /* AppDelegate.swift */; };
+		DF65CD781C460EF600934C8D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF65CD771C460EF600934C8D /* ViewController.swift */; };
+		DF65CD7B1C460EF600934C8D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF65CD791C460EF600934C8D /* Main.storyboard */; };
+		DF65CD7D1C460EF600934C8D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DF65CD7C1C460EF600934C8D /* Assets.xcassets */; };
+		DF65CD801C460EF600934C8D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF65CD7E1C460EF600934C8D /* LaunchScreen.storyboard */; };
+		DF65CD8B1C460EF600934C8D /* CircularProgressView_exampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF65CD8A1C460EF600934C8D /* CircularProgressView_exampleUITests.swift */; };
+		DF65CD931C460F7700934C8D /* CircularProgressView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF65CD531C45FF8500934C8D /* CircularProgressView.framework */; };
+		DF65CD941C460F7700934C8D /* CircularProgressView.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DF65CD531C45FF8500934C8D /* CircularProgressView.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		DF4F1A0B1AF57C990079AF39 /* PBXContainerItemProxy */ = {
+		DF65CD5F1C45FF8500934C8D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = DF4F19ED1AF57C980079AF39 /* Project object */;
+			containerPortal = DF65CD4A1C45FF8500934C8D /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = DF4F19F41AF57C980079AF39;
+			remoteGlobalIDString = DF65CD521C45FF8500934C8D;
+			remoteInfo = CircularProgressView;
+		};
+		DF65CD871C460EF600934C8D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DF65CD4A1C45FF8500934C8D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DF65CD721C460EF600934C8D;
+			remoteInfo = "CircularProgressView-example";
+		};
+		DF65CD951C460F7700934C8D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DF65CD4A1C45FF8500934C8D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DF65CD521C45FF8500934C8D;
 			remoteInfo = CircularProgressView;
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		DF65CD971C460F7700934C8D /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				DF65CD941C460F7700934C8D /* CircularProgressView.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
-		DF3E10B61AFA979200AFBD70 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
-		DF3E10B81AFAC63D00AFBD70 /* LICENSE.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = LICENSE.md; sourceTree = "<group>"; };
-		DF3E10BE1AFACB6B00AFBD70 /* CircularProgressView.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CircularProgressView.png; sourceTree = "<group>"; };
-		DF4F19F51AF57C980079AF39 /* CircularProgressView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CircularProgressView.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		DF4F19F91AF57C980079AF39 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DF4F19FA1AF57C980079AF39 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		DF4F19FC1AF57C980079AF39 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		DF4F19FF1AF57C980079AF39 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		DF4F1A011AF57C980079AF39 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		DF4F1A041AF57C980079AF39 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		DF4F1A0A1AF57C990079AF39 /* CircularProgressViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CircularProgressViewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		DF4F1A0F1AF57C990079AF39 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DF4F1A101AF57C990079AF39 /* CircularProgressViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularProgressViewTests.swift; sourceTree = "<group>"; };
-		DFC2EE3D1AF8A4D90020A9A5 /* CircularProgressView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircularProgressView.swift; sourceTree = "<group>"; };
+		DF65CD531C45FF8500934C8D /* CircularProgressView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CircularProgressView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DF65CD561C45FF8500934C8D /* CircularProgressView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CircularProgressView.h; sourceTree = "<group>"; };
+		DF65CD581C45FF8500934C8D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DF65CD5D1C45FF8500934C8D /* CircularProgressViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CircularProgressViewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DF65CD621C45FF8500934C8D /* CircularProgressViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularProgressViewTests.swift; sourceTree = "<group>"; };
+		DF65CD641C45FF8500934C8D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DF65CD6D1C45FFA300934C8D /* CircularProgressView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircularProgressView.swift; sourceTree = "<group>"; };
+		DF65CD731C460EF600934C8D /* CircularProgressView-example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CircularProgressView-example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DF65CD751C460EF600934C8D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		DF65CD771C460EF600934C8D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		DF65CD7A1C460EF600934C8D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		DF65CD7C1C460EF600934C8D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DF65CD7F1C460EF600934C8D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		DF65CD811C460EF600934C8D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DF65CD861C460EF600934C8D /* CircularProgressView-exampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "CircularProgressView-exampleUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DF65CD8A1C460EF600934C8D /* CircularProgressView_exampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularProgressView_exampleUITests.swift; sourceTree = "<group>"; };
+		DF65CD8C1C460EF600934C8D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		DF4F19F21AF57C980079AF39 /* Frameworks */ = {
+		DF65CD4F1C45FF8500934C8D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		DF4F1A071AF57C990079AF39 /* Frameworks */ = {
+		DF65CD5A1C45FF8500934C8D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DF65CD5E1C45FF8500934C8D /* CircularProgressView.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DF65CD701C460EF600934C8D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DF65CD931C460F7700934C8D /* CircularProgressView.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DF65CD831C460EF600934C8D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -63,84 +113,91 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		DF3E10BD1AFACB6B00AFBD70 /* Images */ = {
+		DF65CD491C45FF8500934C8D = {
 			isa = PBXGroup;
 			children = (
-				DF3E10BE1AFACB6B00AFBD70 /* CircularProgressView.png */,
-			);
-			path = Images;
-			sourceTree = "<group>";
-		};
-		DF4F19EC1AF57C980079AF39 = {
-			isa = PBXGroup;
-			children = (
-				DF3E10B81AFAC63D00AFBD70 /* LICENSE.md */,
-				DF3E10B61AFA979200AFBD70 /* README.md */,
-				DF3E10BD1AFACB6B00AFBD70 /* Images */,
-				DF4F19F71AF57C980079AF39 /* CircularProgressView */,
-				DF4F1A0D1AF57C990079AF39 /* CircularProgressViewTests */,
-				DF4F19F61AF57C980079AF39 /* Products */,
+				DF65CD551C45FF8500934C8D /* CircularProgressView */,
+				DF65CD611C45FF8500934C8D /* CircularProgressViewTests */,
+				DF65CD741C460EF600934C8D /* CircularProgressView-example */,
+				DF65CD891C460EF600934C8D /* CircularProgressView-exampleUITests */,
+				DF65CD541C45FF8500934C8D /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		DF4F19F61AF57C980079AF39 /* Products */ = {
+		DF65CD541C45FF8500934C8D /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				DF4F19F51AF57C980079AF39 /* CircularProgressView.app */,
-				DF4F1A0A1AF57C990079AF39 /* CircularProgressViewTests.xctest */,
+				DF65CD531C45FF8500934C8D /* CircularProgressView.framework */,
+				DF65CD5D1C45FF8500934C8D /* CircularProgressViewTests.xctest */,
+				DF65CD731C460EF600934C8D /* CircularProgressView-example.app */,
+				DF65CD861C460EF600934C8D /* CircularProgressView-exampleUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		DF4F19F71AF57C980079AF39 /* CircularProgressView */ = {
+		DF65CD551C45FF8500934C8D /* CircularProgressView */ = {
 			isa = PBXGroup;
 			children = (
-				DF4F19FA1AF57C980079AF39 /* AppDelegate.swift */,
-				DF4F19FC1AF57C980079AF39 /* ViewController.swift */,
-				DFC2EE3D1AF8A4D90020A9A5 /* CircularProgressView.swift */,
-				DF4F19FE1AF57C980079AF39 /* Main.storyboard */,
-				DF4F1A011AF57C980079AF39 /* Images.xcassets */,
-				DF4F1A031AF57C980079AF39 /* LaunchScreen.xib */,
-				DF4F19F81AF57C980079AF39 /* Supporting Files */,
+				DF65CD561C45FF8500934C8D /* CircularProgressView.h */,
+				DF65CD6D1C45FFA300934C8D /* CircularProgressView.swift */,
+				DF65CD581C45FF8500934C8D /* Info.plist */,
 			);
 			path = CircularProgressView;
 			sourceTree = "<group>";
 		};
-		DF4F19F81AF57C980079AF39 /* Supporting Files */ = {
+		DF65CD611C45FF8500934C8D /* CircularProgressViewTests */ = {
 			isa = PBXGroup;
 			children = (
-				DF4F19F91AF57C980079AF39 /* Info.plist */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		DF4F1A0D1AF57C990079AF39 /* CircularProgressViewTests */ = {
-			isa = PBXGroup;
-			children = (
-				DF4F1A101AF57C990079AF39 /* CircularProgressViewTests.swift */,
-				DF4F1A0E1AF57C990079AF39 /* Supporting Files */,
+				DF65CD621C45FF8500934C8D /* CircularProgressViewTests.swift */,
+				DF65CD641C45FF8500934C8D /* Info.plist */,
 			);
 			path = CircularProgressViewTests;
 			sourceTree = "<group>";
 		};
-		DF4F1A0E1AF57C990079AF39 /* Supporting Files */ = {
+		DF65CD741C460EF600934C8D /* CircularProgressView-example */ = {
 			isa = PBXGroup;
 			children = (
-				DF4F1A0F1AF57C990079AF39 /* Info.plist */,
+				DF65CD751C460EF600934C8D /* AppDelegate.swift */,
+				DF65CD771C460EF600934C8D /* ViewController.swift */,
+				DF65CD791C460EF600934C8D /* Main.storyboard */,
+				DF65CD7C1C460EF600934C8D /* Assets.xcassets */,
+				DF65CD7E1C460EF600934C8D /* LaunchScreen.storyboard */,
+				DF65CD811C460EF600934C8D /* Info.plist */,
 			);
-			name = "Supporting Files";
+			path = "CircularProgressView-example";
+			sourceTree = "<group>";
+		};
+		DF65CD891C460EF600934C8D /* CircularProgressView-exampleUITests */ = {
+			isa = PBXGroup;
+			children = (
+				DF65CD8A1C460EF600934C8D /* CircularProgressView_exampleUITests.swift */,
+				DF65CD8C1C460EF600934C8D /* Info.plist */,
+			);
+			path = "CircularProgressView-exampleUITests";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		DF65CD501C45FF8500934C8D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DF65CD571C45FF8500934C8D /* CircularProgressView.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
-		DF4F19F41AF57C980079AF39 /* CircularProgressView */ = {
+		DF65CD521C45FF8500934C8D /* CircularProgressView */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = DF4F1A141AF57C990079AF39 /* Build configuration list for PBXNativeTarget "CircularProgressView" */;
+			buildConfigurationList = DF65CD671C45FF8500934C8D /* Build configuration list for PBXNativeTarget "CircularProgressView" */;
 			buildPhases = (
-				DF4F19F11AF57C980079AF39 /* Sources */,
-				DF4F19F21AF57C980079AF39 /* Frameworks */,
-				DF4F19F31AF57C980079AF39 /* Resources */,
+				DF65CD4E1C45FF8500934C8D /* Sources */,
+				DF65CD4F1C45FF8500934C8D /* Frameworks */,
+				DF65CD501C45FF8500934C8D /* Headers */,
+				DF65CD511C45FF8500934C8D /* Resources */,
 			);
 			buildRules = (
 			);
@@ -148,46 +205,90 @@
 			);
 			name = CircularProgressView;
 			productName = CircularProgressView;
-			productReference = DF4F19F51AF57C980079AF39 /* CircularProgressView.app */;
-			productType = "com.apple.product-type.application";
+			productReference = DF65CD531C45FF8500934C8D /* CircularProgressView.framework */;
+			productType = "com.apple.product-type.framework";
 		};
-		DF4F1A091AF57C990079AF39 /* CircularProgressViewTests */ = {
+		DF65CD5C1C45FF8500934C8D /* CircularProgressViewTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = DF4F1A171AF57C990079AF39 /* Build configuration list for PBXNativeTarget "CircularProgressViewTests" */;
+			buildConfigurationList = DF65CD6A1C45FF8500934C8D /* Build configuration list for PBXNativeTarget "CircularProgressViewTests" */;
 			buildPhases = (
-				DF4F1A061AF57C990079AF39 /* Sources */,
-				DF4F1A071AF57C990079AF39 /* Frameworks */,
-				DF4F1A081AF57C990079AF39 /* Resources */,
+				DF65CD591C45FF8500934C8D /* Sources */,
+				DF65CD5A1C45FF8500934C8D /* Frameworks */,
+				DF65CD5B1C45FF8500934C8D /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				DF4F1A0C1AF57C990079AF39 /* PBXTargetDependency */,
+				DF65CD601C45FF8500934C8D /* PBXTargetDependency */,
 			);
 			name = CircularProgressViewTests;
 			productName = CircularProgressViewTests;
-			productReference = DF4F1A0A1AF57C990079AF39 /* CircularProgressViewTests.xctest */;
+			productReference = DF65CD5D1C45FF8500934C8D /* CircularProgressViewTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		DF65CD721C460EF600934C8D /* CircularProgressView-example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DF65CD8D1C460EF600934C8D /* Build configuration list for PBXNativeTarget "CircularProgressView-example" */;
+			buildPhases = (
+				DF65CD6F1C460EF600934C8D /* Sources */,
+				DF65CD701C460EF600934C8D /* Frameworks */,
+				DF65CD711C460EF600934C8D /* Resources */,
+				DF65CD971C460F7700934C8D /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DF65CD961C460F7700934C8D /* PBXTargetDependency */,
+			);
+			name = "CircularProgressView-example";
+			productName = "CircularProgressView-example";
+			productReference = DF65CD731C460EF600934C8D /* CircularProgressView-example.app */;
+			productType = "com.apple.product-type.application";
+		};
+		DF65CD851C460EF600934C8D /* CircularProgressView-exampleUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DF65CD901C460EF600934C8D /* Build configuration list for PBXNativeTarget "CircularProgressView-exampleUITests" */;
+			buildPhases = (
+				DF65CD821C460EF600934C8D /* Sources */,
+				DF65CD831C460EF600934C8D /* Frameworks */,
+				DF65CD841C460EF600934C8D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DF65CD881C460EF600934C8D /* PBXTargetDependency */,
+			);
+			name = "CircularProgressView-exampleUITests";
+			productName = "CircularProgressView-exampleUITests";
+			productReference = DF65CD861C460EF600934C8D /* CircularProgressView-exampleUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		DF4F19ED1AF57C980079AF39 /* Project object */ = {
+		DF65CD4A1C45FF8500934C8D /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0630;
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = "Joe Christopher Paul Amanse";
 				TargetAttributes = {
-					DF4F19F41AF57C980079AF39 = {
-						CreatedOnToolsVersion = 6.3.1;
+					DF65CD521C45FF8500934C8D = {
+						CreatedOnToolsVersion = 7.2;
 					};
-					DF4F1A091AF57C990079AF39 = {
-						CreatedOnToolsVersion = 6.3.1;
-						TestTargetID = DF4F19F41AF57C980079AF39;
+					DF65CD5C1C45FF8500934C8D = {
+						CreatedOnToolsVersion = 7.2;
+					};
+					DF65CD721C460EF600934C8D = {
+						CreatedOnToolsVersion = 7.2;
+					};
+					DF65CD851C460EF600934C8D = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = DF65CD721C460EF600934C8D;
 					};
 				};
 			};
-			buildConfigurationList = DF4F19F01AF57C980079AF39 /* Build configuration list for PBXProject "CircularProgressView" */;
+			buildConfigurationList = DF65CD4D1C45FF8500934C8D /* Build configuration list for PBXProject "CircularProgressView" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -195,29 +296,45 @@
 				en,
 				Base,
 			);
-			mainGroup = DF4F19EC1AF57C980079AF39;
-			productRefGroup = DF4F19F61AF57C980079AF39 /* Products */;
+			mainGroup = DF65CD491C45FF8500934C8D;
+			productRefGroup = DF65CD541C45FF8500934C8D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				DF4F19F41AF57C980079AF39 /* CircularProgressView */,
-				DF4F1A091AF57C990079AF39 /* CircularProgressViewTests */,
+				DF65CD521C45FF8500934C8D /* CircularProgressView */,
+				DF65CD5C1C45FF8500934C8D /* CircularProgressViewTests */,
+				DF65CD721C460EF600934C8D /* CircularProgressView-example */,
+				DF65CD851C460EF600934C8D /* CircularProgressView-exampleUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		DF4F19F31AF57C980079AF39 /* Resources */ = {
+		DF65CD511C45FF8500934C8D /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DF4F1A001AF57C980079AF39 /* Main.storyboard in Resources */,
-				DF4F1A051AF57C980079AF39 /* LaunchScreen.xib in Resources */,
-				DF4F1A021AF57C980079AF39 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		DF4F1A081AF57C990079AF39 /* Resources */ = {
+		DF65CD5B1C45FF8500934C8D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DF65CD711C460EF600934C8D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DF65CD801C460EF600934C8D /* LaunchScreen.storyboard in Resources */,
+				DF65CD7D1C460EF600934C8D /* Assets.xcassets in Resources */,
+				DF65CD7B1C460EF600934C8D /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DF65CD841C460EF600934C8D /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -227,57 +344,80 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		DF4F19F11AF57C980079AF39 /* Sources */ = {
+		DF65CD4E1C45FF8500934C8D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DF3E10B91AFAC63D00AFBD70 /* LICENSE.md in Sources */,
-				DF4F19FD1AF57C980079AF39 /* ViewController.swift in Sources */,
-				DFC2EE3E1AF8A4D90020A9A5 /* CircularProgressView.swift in Sources */,
-				DF3E10B71AFA979200AFBD70 /* README.md in Sources */,
-				DF4F19FB1AF57C980079AF39 /* AppDelegate.swift in Sources */,
+				DF65CD6E1C45FFA300934C8D /* CircularProgressView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		DF4F1A061AF57C990079AF39 /* Sources */ = {
+		DF65CD591C45FF8500934C8D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DF4F1A111AF57C990079AF39 /* CircularProgressViewTests.swift in Sources */,
+				DF65CD631C45FF8500934C8D /* CircularProgressViewTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DF65CD6F1C460EF600934C8D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DF65CD781C460EF600934C8D /* ViewController.swift in Sources */,
+				DF65CD761C460EF600934C8D /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DF65CD821C460EF600934C8D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DF65CD8B1C460EF600934C8D /* CircularProgressView_exampleUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		DF4F1A0C1AF57C990079AF39 /* PBXTargetDependency */ = {
+		DF65CD601C45FF8500934C8D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = DF4F19F41AF57C980079AF39 /* CircularProgressView */;
-			targetProxy = DF4F1A0B1AF57C990079AF39 /* PBXContainerItemProxy */;
+			target = DF65CD521C45FF8500934C8D /* CircularProgressView */;
+			targetProxy = DF65CD5F1C45FF8500934C8D /* PBXContainerItemProxy */;
+		};
+		DF65CD881C460EF600934C8D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DF65CD721C460EF600934C8D /* CircularProgressView-example */;
+			targetProxy = DF65CD871C460EF600934C8D /* PBXContainerItemProxy */;
+		};
+		DF65CD961C460F7700934C8D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DF65CD521C45FF8500934C8D /* CircularProgressView */;
+			targetProxy = DF65CD951C460F7700934C8D /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		DF4F19FE1AF57C980079AF39 /* Main.storyboard */ = {
+		DF65CD791C460EF600934C8D /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				DF4F19FF1AF57C980079AF39 /* Base */,
+				DF65CD7A1C460EF600934C8D /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		DF4F1A031AF57C980079AF39 /* LaunchScreen.xib */ = {
+		DF65CD7E1C460EF600934C8D /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				DF4F1A041AF57C980079AF39 /* Base */,
+				DF65CD7F1C460EF600934C8D /* Base */,
 			);
-			name = LaunchScreen.xib;
+			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		DF4F1A121AF57C990079AF39 /* Debug */ = {
+		DF65CD651C45FF8500934C8D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -296,8 +436,10 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -306,23 +448,24 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
 		};
-		DF4F1A131AF57C990079AF39 /* Release */ = {
+		DF65CD661C45FF8500934C8D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -341,6 +484,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -352,99 +496,168 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
-		DF4F1A151AF57C990079AF39 /* Debug */ = {
+		DF65CD681C45FF8500934C8D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = CircularProgressView/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.chrisamanse.CircularProgressView;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		DF65CD691C45FF8500934C8D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = CircularProgressView/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.chrisamanse.CircularProgressView;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		DF65CD6B1C45FF8500934C8D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = CircularProgressViewTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.chrisamanse.CircularProgressViewTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
 		};
-		DF4F1A161AF57C990079AF39 /* Release */ = {
+		DF65CD6C1C45FF8500934C8D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = CircularProgressView/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				INFOPLIST_FILE = CircularProgressViewTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.chrisamanse.CircularProgressViewTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
 		};
-		DF4F1A181AF57C990079AF39 /* Debug */ = {
+		DF65CD8E1C460EF600934C8D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = CircularProgressViewTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				INFOPLIST_FILE = "CircularProgressView-example/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.chrisamanse.CircularProgressView-example";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CircularProgressView.app/CircularProgressView";
 			};
 			name = Debug;
 		};
-		DF4F1A191AF57C990079AF39 /* Release */ = {
+		DF65CD8F1C460EF600934C8D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = CircularProgressViewTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				INFOPLIST_FILE = "CircularProgressView-example/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.chrisamanse.CircularProgressView-example";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CircularProgressView.app/CircularProgressView";
+			};
+			name = Release;
+		};
+		DF65CD911C460EF600934C8D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "CircularProgressView-exampleUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.chrisamanse.CircularProgressView-exampleUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "CircularProgressView-example";
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		DF65CD921C460EF600934C8D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "CircularProgressView-exampleUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.chrisamanse.CircularProgressView-exampleUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "CircularProgressView-example";
+				USES_XCTRUNNER = YES;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		DF4F19F01AF57C980079AF39 /* Build configuration list for PBXProject "CircularProgressView" */ = {
+		DF65CD4D1C45FF8500934C8D /* Build configuration list for PBXProject "CircularProgressView" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				DF4F1A121AF57C990079AF39 /* Debug */,
-				DF4F1A131AF57C990079AF39 /* Release */,
+				DF65CD651C45FF8500934C8D /* Debug */,
+				DF65CD661C45FF8500934C8D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		DF4F1A141AF57C990079AF39 /* Build configuration list for PBXNativeTarget "CircularProgressView" */ = {
+		DF65CD671C45FF8500934C8D /* Build configuration list for PBXNativeTarget "CircularProgressView" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				DF4F1A151AF57C990079AF39 /* Debug */,
-				DF4F1A161AF57C990079AF39 /* Release */,
+				DF65CD681C45FF8500934C8D /* Debug */,
+				DF65CD691C45FF8500934C8D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
 		};
-		DF4F1A171AF57C990079AF39 /* Build configuration list for PBXNativeTarget "CircularProgressViewTests" */ = {
+		DF65CD6A1C45FF8500934C8D /* Build configuration list for PBXNativeTarget "CircularProgressViewTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				DF4F1A181AF57C990079AF39 /* Debug */,
-				DF4F1A191AF57C990079AF39 /* Release */,
+				DF65CD6B1C45FF8500934C8D /* Debug */,
+				DF65CD6C1C45FF8500934C8D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+		};
+		DF65CD8D1C460EF600934C8D /* Build configuration list for PBXNativeTarget "CircularProgressView-example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DF65CD8E1C460EF600934C8D /* Debug */,
+				DF65CD8F1C460EF600934C8D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		DF65CD901C460EF600934C8D /* Build configuration list for PBXNativeTarget "CircularProgressView-exampleUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DF65CD911C460EF600934C8D /* Debug */,
+				DF65CD921C460EF600934C8D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = DF4F19ED1AF57C980079AF39 /* Project object */;
+	rootObject = DF65CD4A1C45FF8500934C8D /* Project object */;
 }
