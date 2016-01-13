@@ -114,6 +114,27 @@ public class CircularProgressView: UIView {
         customInitialization()
     }
     
+    public init(frame: CGRect, progress: Float = 0, trackWidth: CGFloat = 2, progressWidth: CGFloat = 2,
+        trackTintColor: UIColor, progressTintColor: UIColor) {
+            super.init(frame: frame)
+            
+            self.trackWidth = trackWidth
+            self.progressWidth = progressWidth
+            self.trackTintColor = trackTintColor
+            self.progressTintColor = progressTintColor
+            self.progress = progress
+            
+            customInitialization()
+    }
+    convenience public init(frame: CGRect, progress: Float = 0, trackWidth: CGFloat, progressWidth: CGFloat) {
+        self.init(frame: frame, progress: progress, trackWidth: trackWidth, progressWidth: progressWidth,
+            trackTintColor: UIColor.lightGrayColor(), progressTintColor: UIColor.darkGrayColor())
+    }
+    
+    convenience public init(frame: CGRect, progress: Float = 0, circleWidth: CGFloat) {
+        self.init(frame: frame, progress: progress, trackWidth: circleWidth, progressWidth: circleWidth)
+    }
+    
     private func customInitialization() {
         let clearCGColor = UIColor.clearColor().CGColor
         
