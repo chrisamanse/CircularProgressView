@@ -50,7 +50,7 @@ open class CircularProgressView: UIView {
     }
 
     @IBInspectable
-    open var roundProgressLineCap: Bool = false {
+    open var roundedProgressLineCap: Bool = false {
         didSet {
             layoutProgressLayer()
         }
@@ -124,7 +124,7 @@ open class CircularProgressView: UIView {
     private func layoutProgressLayer() {
         progressLayer.frame = centerSquareGuideFrame
         progressLayer.lineWidth = trackLineWidth
-        progressLayer.lineCap = roundProgressLineCap ? kCALineCapRound : kCALineCapButt
+        progressLayer.lineCap = roundedProgressLineCap ? kCALineCapRound : kCALineCapButt
         progressLayer.path = progressLayerPath.cgPath
         progressLayer.strokeEnd = CGFloat(progress)
     }
