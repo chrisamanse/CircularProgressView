@@ -37,18 +37,27 @@ open class CircularProgressView: UIView {
         }
     }
 
-    private let centerSquareGuideLayer = CALayer()
+    private var centerSquareGuideBounds: CGRect {
+        let squareSideLength = min(layer.bounds.width, layer.bounds.height)
+        return CGRect(origin: .zero, size: CGSize(width: squareSideLength, height: squareSideLength))
+    }
+    private var centerSquareGuideFrame: CGRect {
+        let squareOriginOffset = abs(layer.bounds.width - layer.bounds.height) / 2
+        let squareOriginOffsetX = layer.bounds.width < layer.bounds.height ? 0 : squareOriginOffset
+        let squareOriginOffsetY = layer.bounds.width < layer.bounds.height ? squareOriginOffset : 0
+        return centerSquareGuideBounds.offsetBy(dx: squareOriginOffsetX, dy: squareOriginOffsetY)
+    }
     private let trackLayer = CAShapeLayer()
     private var trackLayerPath: UIBezierPath {
         let trackRectInset = trackLineWidth / 2
-        let trackRectWithInset = centerSquareGuideLayer.bounds.insetBy(dx: trackRectInset, dy: trackRectInset)
+        let trackRectWithInset = centerSquareGuideBounds.insetBy(dx: trackRectInset, dy: trackRectInset)
         return UIBezierPath(ovalIn: trackRectWithInset)
     }
     private let progressLayer = CAShapeLayer()
     private var progressLayerPath: UIBezierPath {
         let path = UIBezierPath()
         let trackRectInset = trackLineWidth / 2
-        let trackRectWithInset = centerSquareGuideLayer.bounds.insetBy(dx: trackRectInset, dy: trackRectInset)
+        let trackRectWithInset = centerSquareGuideBounds.insetBy(dx: trackRectInset, dy: trackRectInset)
         let radius = trackRectWithInset.width / 2
         let arcCenter = CGPoint(x: trackRectWithInset.midX, y: trackRectWithInset.midY)
         let circleTopPoint = CGPoint(x: arcCenter.x, y: arcCenter.y - radius)
@@ -79,39 +88,27 @@ open class CircularProgressView: UIView {
     private func setupCustomLayers() {
         layoutCustomSublayers()
         colorCustomSublayers()
-        centerSquareGuideLayer.addSublayer(trackLayer)
-        centerSquareGuideLayer.insertSublayer(progressLayer, above: trackLayer)
-        layer.addSublayer(centerSquareGuideLayer)
+        layer.addSublayer(trackLayer)
+        layer.insertSublayer(progressLayer, above: trackLayer)
     }
 
     private func layoutCustomSublayers() {
-        layoutCenterSquareGuideLayer()
         layoutTrackLayer()
         layoutProgressLayer()
     }
 
-    private func layoutCenterSquareGuideLayer() {
-        let squareSublayerSideLength = min(layer.bounds.width, layer.bounds.height)
-        let squareSublayerOriginOffset = abs(layer.bounds.width - layer.bounds.height) / 2
-        let squareSublayerOriginX = layer.bounds.width < layer.bounds.height ? 0 : squareSublayerOriginOffset
-        let squareSublayerOriginY = layer.bounds.width < layer.bounds.height ? squareSublayerOriginOffset : 0
-        centerSquareGuideLayer.frame = CGRect(x: squareSublayerOriginX, y: squareSublayerOriginY, width: squareSublayerSideLength, height: squareSublayerSideLength)
-    }
-
     private func layoutTrackLayer() {
-        trackLayer.frame = centerSquareGuideLayer.bounds
+        trackLayer.frame = centerSquareGuideFrame
         trackLayer.lineWidth = trackLineWidth
         trackLayer.path = trackLayerPath.cgPath
     }
     private func layoutProgressLayer() {
-        progressLayer.frame = centerSquareGuideLayer.bounds
+        progressLayer.frame = centerSquareGuideFrame
         progressLayer.lineWidth = trackLineWidth
         progressLayer.path = progressLayerPath.cgPath
     }
 
     private func colorCustomSublayers() {
-        // TODO: Remove. For debugging only
-        centerSquareGuideLayer.backgroundColor = UIColor.darkGray.cgColor
         colorTrackLayer()
         colorProgressLayer()
     }
