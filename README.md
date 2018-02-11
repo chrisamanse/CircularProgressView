@@ -6,43 +6,41 @@ A circular progress view for iOS implemented in Swift.
 
 # Features
 
-* Autoresizes proportionally and centers to fit view
-* Change track color, and progress color
-* Adjustable track width
+* Resizes proportionally and centers to fit view
+* Customize the track's and progress's colors
+* Customize the track's line width
 
 # Installation
 
-There are a couple of ways to use `CircularProgressView` in your project:
-
 - Manual
-  - Simply add CircularProgressView.swift in your project. Then either create an instance of CircularProgressView using code or Interface Builder.
+  - Add CircularProgressView.swift in target
 - Carthage
-  - Add `github "chrisamanse/CircularProgressView"` in your Cartfile
+  - Add `github "chrisamanse/CircularProgressView"` in Cartfile
 
 # Usage
 
 ## Programmatically
 
-        let rectProgressView = CGRect(x: 40, y: 40, width: 100, height: 100)
-        let progressView = CircularProgressView(frame: rectProgressView, progress: 0.67)
-        
-        view.addSubview(progressView)
+```swift
+let rectProgressView = CGRect(x: 40, y: 40, width: 100, height: 100)
+let progressView = CircularProgressView(frame: rectProgressView)
+progressView.progress = 0.67
+view.addSubview(progressView)
+```
 
-### To change progress, simply change progress property ( Float values pinned to [0,1] )
+### View properties
 
-        progressView.progress = 0.75
-
-### View properties are trackWidth, trackTintColor, progressTintColor
-
-        progressView.trackWidth = 4.0
-        progressView.trackTintColor = UIColor.lightGrayColor()
-        progressView.progressTintColor = UIColor.darkGrayColor()
+```swift
+progressView.trackLineWidth = 4.0
+progressView.trackTintColor = UIColor.lightGrayColor()
+progressView.progressTintColor = UIColor.darkGrayColor()
+progressView.roundedProgressLineCap = true
+```
 
 ## Interface Builder
 
-Just use custom UIView subclass CircularProgressView on UIView in Interface Builder. Its properties can also be changed in IB.
+Use UIView subclass `CircularProgressView` on a UIView in Interface Builder. Enter `CircularProgressView` as module if it is from the framework. Its properties can also be changed in Interface Builder.
 
 ## License
 
-Copyright (c) 2016 Joe Christopher Paul Amanse. This software is distributed under the [MIT License](./LICENSE.md)
-
+Copyright (c) 2018 Joe Christopher Paul Amanse. This software is distributed under the [MIT License](./LICENSE.md)
