@@ -28,6 +28,7 @@
                                     <userDefinedRuntimeAttribute type="number" keyPath="progress">
                                         <real key="value" value="0.67000000000000004"/>
                                     </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="_progressLineCapStringValue" value="round"/>
                                 </userDefinedRuntimeAttributes>
                             </view>
                         </subviews>

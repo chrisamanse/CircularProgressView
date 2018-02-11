@@ -8,6 +8,18 @@
 
 import UIKit
 
+public struct CALineCap: RawRepresentable {
+    public var rawValue: String
+
+    public init(rawValue:String) {
+        self.rawValue = rawValue
+    }
+
+    public static let butt = CALineCap(rawValue: kCALineCapButt)
+    public static let round = CALineCap(rawValue: kCALineCapRound)
+    public static let square = CALineCap(rawValue: kCALineCapSquare)
+}
+
 @IBDesignable
 open class CircularProgressView: UIView {
     private var _progress: Float = 0
@@ -46,6 +58,22 @@ open class CircularProgressView: UIView {
         set {
             _customProgressTintColor = newValue
             colorProgressLayer()
+        }
+    }
+
+    @IBInspectable
+    private var _progressLineCapStringValue: String = CALineCap.butt.rawValue {
+        didSet {
+            layoutProgressLayer()
+        }
+    }
+
+    open var progressLineCap: CALineCap {
+        get {
+            return CALineCap(rawValue: _progressLineCapStringValue)
+        }
+        set {
+            _progressLineCapStringValue = newValue.rawValue
         }
     }
 
@@ -117,6 +145,7 @@ open class CircularProgressView: UIView {
     private func layoutProgressLayer() {
         progressLayer.frame = centerSquareGuideFrame
         progressLayer.lineWidth = trackLineWidth
+        progressLayer.lineCap = progressLineCap.rawValue
         progressLayer.path = progressLayerPath.cgPath
         progressLayer.strokeEnd = CGFloat(progress)
     }
