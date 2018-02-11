@@ -10,6 +10,18 @@ import UIKit
 
 @IBDesignable
 open class CircularProgressView: UIView {
+    private var _progress: Float = 0
+    @IBInspectable
+    open var progress: Float {
+        get {
+            return _progress
+        }
+        set {
+            _progress = min(max(0, newValue), 1)
+            layoutProgressLayer()
+        }
+    }
+
     @IBInspectable
     open var trackLineWidth: CGFloat = 1 {
         didSet {
@@ -106,6 +118,7 @@ open class CircularProgressView: UIView {
         progressLayer.frame = centerSquareGuideFrame
         progressLayer.lineWidth = trackLineWidth
         progressLayer.path = progressLayerPath.cgPath
+        progressLayer.strokeEnd = CGFloat(progress)
     }
 
     private func colorCustomSublayers() {
