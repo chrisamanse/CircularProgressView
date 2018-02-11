@@ -75,10 +75,6 @@ open class CircularProgressView: UIView {
         layoutCustomSublayers()
     }
 
-    open override func prepareForInterfaceBuilder() {
-        setupCustomLayers()
-    }
-
     private func setupCustomLayers() {
         layoutCustomSublayers()
         colorCustomSublayers()
