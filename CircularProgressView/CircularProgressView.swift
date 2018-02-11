@@ -72,6 +72,7 @@ open class CircularProgressView: UIView {
     }
 
     open override func layoutSubviews() {
+        super.layoutSubviews()
         layoutCustomSublayers()
     }
 
