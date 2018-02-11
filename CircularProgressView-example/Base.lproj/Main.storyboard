@@ -1,72 +1,65 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CircularProgressView_example" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
-                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="au3-7F-5ID" customClass="CircularProgressView" customModule="CircularProgressView">
-                                <rect key="frame" x="0.0" y="20" width="600" height="300"/>
-                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lhi-4q-xvX" customClass="CircularProgressView" customModule="CircularProgressView">
+                                <rect key="frame" x="0.0" y="60" width="375" height="180"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="300" id="qfH-my-fUJ"/>
+                                    <constraint firstAttribute="height" priority="999" constant="180" id="CoX-vk-cbi"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="trackWidth">
-                                        <real key="value" value="16"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="progressWidth">
-                                        <real key="value" value="16"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="trackLineWidth">
+                                        <real key="value" value="15"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="progress">
-                                        <real key="value" value="0.66669999999999996"/>
+                                        <real key="value" value="0.5"/>
                                     </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="trackTintColor">
-                                        <color key="value" red="1" green="1" blue="0.2776778372" alpha="1" colorSpace="calibratedRGB"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="progressTintColor">
-                                        <color key="value" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="roundedProgressLineCap" value="YES"/>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.66669999999999996" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="TSg-ZP-I57">
-                                <rect key="frame" x="18" y="328" width="564" height="31"/>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="ct8-Mg-nIq">
+                                <rect key="frame" x="28" y="270" width="319" height="31"/>
                                 <connections>
-                                    <action selector="didUpdateSliderValue:" destination="BYZ-38-t0r" eventType="valueChanged" id="Kae-FS-rmN"/>
+                                    <action selector="didChangeSliderValue:" destination="BYZ-38-t0r" eventType="valueChanged" id="fCK-Ft-GRe"/>
                                 </connections>
                             </slider>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="au3-7F-5ID" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="3s4-sG-a9R"/>
-                            <constraint firstItem="TSg-ZP-I57" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="8mJ-iT-tKB"/>
-                            <constraint firstItem="TSg-ZP-I57" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Ghq-3r-Vc1"/>
-                            <constraint firstItem="TSg-ZP-I57" firstAttribute="top" secondItem="au3-7F-5ID" secondAttribute="bottom" constant="8" id="KJi-qJ-gOM"/>
-                            <constraint firstAttribute="trailing" secondItem="au3-7F-5ID" secondAttribute="trailing" id="cI7-4P-7ue"/>
-                            <constraint firstItem="au3-7F-5ID" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="jaB-Ji-gAH"/>
+                            <constraint firstItem="Lhi-4q-xvX" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="40" id="8dv-SG-lEN"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="ct8-Mg-nIq" secondAttribute="bottom" constant="20" id="Exq-FM-pKi"/>
+                            <constraint firstItem="Lhi-4q-xvX" firstAttribute="trailing" secondItem="ct8-Mg-nIq" secondAttribute="trailing" constant="30" id="gEm-le-o2E"/>
+                            <constraint firstItem="ct8-Mg-nIq" firstAttribute="top" secondItem="Lhi-4q-xvX" secondAttribute="bottom" constant="30" id="qAV-r3-E8l"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Lhi-4q-xvX" secondAttribute="trailing" id="rek-vK-W9L"/>
+                            <constraint firstItem="Lhi-4q-xvX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="u7W-pI-ZhQ"/>
+                            <constraint firstItem="ct8-Mg-nIq" firstAttribute="leading" secondItem="Lhi-4q-xvX" secondAttribute="leading" constant="30" id="xQb-5J-e1o"/>
                         </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="progressView" destination="au3-7F-5ID" id="jd6-yL-hfX"/>
-                        <outlet property="slider" destination="TSg-ZP-I57" id="YyO-rN-JGc"/>
+                        <outlet property="progressView" destination="Lhi-4q-xvX" id="cY1-zx-vJB"/>
+                        <outlet property="slider" destination="ct8-Mg-nIq" id="SkY-DO-vUA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="232" y="337"/>
+            <point key="canvasLocation" x="32.799999999999997" y="31.934032983508249"/>
         </scene>
     </scenes>
 </document>
