@@ -7,6 +7,18 @@
 //
 
 import UIKit
+import CircularProgressView
 
 class ViewController: UIViewController {
+    @IBOutlet private weak var progressView: CircularProgressView!
+    @IBOutlet private weak var slider: UISlider!
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        progressView.progress = slider.value
+    }
+
+    @IBAction func didChangeSliderValue(_ sender: UISlider) {
+        progressView.progress = sender.value
+    }
 }
