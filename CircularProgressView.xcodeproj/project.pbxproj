@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DF30BE4620303C0400E163C9 /* CircularProgressView.swift in Headers */ = {isa = PBXBuildFile; fileRef = DFADAC29202FBF81009CBFAF /* CircularProgressView.swift */; settings = {ATTRIBUTES = (Public, ); }; };
 		DFADAC08202FBCF3009CBFAF /* CircularProgressView.h in Headers */ = {isa = PBXBuildFile; fileRef = DFADAC06202FBCF3009CBFAF /* CircularProgressView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DFADAC15202FBD7E009CBFAF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFADAC14202FBD7E009CBFAF /* AppDelegate.swift */; };
 		DFADAC17202FBD7E009CBFAF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFADAC16202FBD7E009CBFAF /* ViewController.swift */; };
@@ -124,6 +125,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DFADAC08202FBCF3009CBFAF /* CircularProgressView.h in Headers */,
+				DF30BE4620303C0400E163C9 /* CircularProgressView.swift in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
