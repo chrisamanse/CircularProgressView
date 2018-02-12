@@ -4,22 +4,22 @@ A circular progress view for iOS implemented in Swift.
 
 ![](./Images/CircularProgressView.png)
 
-# Features
+## Features
 
 * Resizes proportionally and centers to fit view
 * Customize the track's and progress's colors
 * Customize the track's line width
 
-# Installation
+## Installation
 
 - Manual
   - Add CircularProgressView.swift in target
 - Carthage
   - Add `github "chrisamanse/CircularProgressView"` in Cartfile
 
-# Usage
+## Usage
 
-## Programmatically
+### Programmatically
 
 ```swift
 let rectProgressView = CGRect(x: 40, y: 40, width: 100, height: 100)
@@ -37,7 +37,7 @@ progressView.progressTintColor = UIColor.darkGrayColor()
 progressView.roundedProgressLineCap = true
 ```
 
-## Interface Builder
+### Interface Builder
 
 Use UIView subclass `CircularProgressView` on a UIView in Interface Builder. Enter `CircularProgressView` as module if it is from the framework. Its properties can also be changed in Interface Builder.
 
