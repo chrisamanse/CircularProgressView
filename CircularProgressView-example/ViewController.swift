@@ -21,4 +21,10 @@ class ViewController: UIViewController {
     @IBAction func didChangeSliderValue(_ sender: UISlider) {
         progressView.progress = sender.value
     }
+
+    @IBAction func didPressAnimate(_ sender: Any) {
+        UIView.animate(withDuration: 3.0) {
+            self.progressView.progress = 1.0
+        }
+    }
 }

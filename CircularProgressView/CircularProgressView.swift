@@ -18,7 +18,7 @@ open class CircularProgressView: UIView {
         }
         set {
             _progress = min(max(0, newValue), 1)
-            layoutProgressLayer()
+            layer.setValue(CGFloat(progress), forKeyPath: #keyPath(CircularProgressView.progress))
         }
     }
 
@@ -104,7 +104,39 @@ open class CircularProgressView: UIView {
         layoutCustomSublayers()
     }
 
+    open override func action(for layer: CALayer, forKey event: String) -> CAAction? {
+        if event == #keyPath(CircularProgressView.progress) {
+            CATransaction.begin()
+            CATransaction.setDisableActions(true)
+            progressLayer.strokeEnd = CGFloat(progress)
+            CATransaction.commit()
+
+            if let action = super.action(for: layer, forKey: #keyPath(backgroundColor)) as? CAAnimation {
+                let currentProgress = layer.value(forKeyPath: #keyPath(CircularProgressView.progress))
+                let targetProgress = CGFloat(progress)
+                let animation = CABasicAnimation(keyPath: #keyPath(CAShapeLayer.strokeEnd))
+                animation.fromValue = currentProgress
+                animation.toValue = targetProgress
+                animation.beginTime = action.beginTime
+                animation.duration = action.duration
+                animation.speed = action.speed
+                animation.timeOffset = action.timeOffset
+                animation.repeatCount = action.repeatCount
+                animation.repeatDuration = action.repeatDuration
+                animation.autoreverses = action.autoreverses
+                animation.fillMode = action.fillMode
+                animation.timingFunction = action.timingFunction
+                animation.delegate = action.delegate
+                animation.isRemovedOnCompletion = action.isRemovedOnCompletion
+                progressLayer.add(animation, forKey: #keyPath(CAShapeLayer.strokeEnd))
+            }
+        }
+        return super.action(for: layer, forKey: event)
+    }
+
     private func setupCustomLayers() {
+        trackLayer.frame = centerSquareGuideFrame
+        progressLayer.frame = centerSquareGuideFrame
         layoutCustomSublayers()
         colorCustomSublayers()
         layer.addSublayer(trackLayer)
@@ -117,12 +149,10 @@ open class CircularProgressView: UIView {
     }
 
     private func layoutTrackLayer() {
-        trackLayer.frame = centerSquareGuideFrame
         trackLayer.lineWidth = trackLineWidth
         trackLayer.path = trackLayerPath.cgPath
     }
     private func layoutProgressLayer() {
-        progressLayer.frame = centerSquareGuideFrame
         progressLayer.lineWidth = trackLineWidth
         progressLayer.lineCap = roundedProgressLineCap ? kCALineCapRound : kCALineCapButt
         progressLayer.path = progressLayerPath.cgPath
